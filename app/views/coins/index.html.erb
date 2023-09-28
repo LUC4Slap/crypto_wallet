@@ -3,12 +3,23 @@
 <h1>Coins</h1>
 
 <div id="coins">
-  <% @coins.each do |coin| %>
-    <%= render coin %>
-    <p>
-      <%= link_to "Show this coin", coin %>
-    </p>
-  <% end %>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">sigla</th>
+      <th scope="col">imagem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @coins.each do |coin| %>
+      <%= render coin %>
+      <p>
+        <%= link_to "Show this coin", coin %>
+      </p>
+    <% end %>
+   </tbody>
+  </table>
 </div>
 
 <%= link_to "New coin", new_coin_path %>
