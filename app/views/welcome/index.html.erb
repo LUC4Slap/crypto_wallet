@@ -4,6 +4,6 @@
         Total de moedas cadastradas: <b><%= @coins.length %></b>
     </p>
     <p>Hoje é dia: <%= date_br(Date.today) %></p>
-    <p>Valor do Bitcoin em dolar: <%= btc_price %></p>
+    <p>Valor do Bitcoin em dolar: <%= btc_price_US %></p>
     <%= link_to 'Lista de moedas', coins_path, class: 'btn btn-primary p-2' %>
 </div>

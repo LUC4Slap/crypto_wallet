@@ -1,7 +1,7 @@
 require 'net/http'
 require "json"
 module WelcomeHelper
-    def btc_price
+    def btc_price_US
       lista = Net::HTTP.new('blockchain.info', 443)
       lista.use_ssl = true
       response = lista.get('/ticker')
