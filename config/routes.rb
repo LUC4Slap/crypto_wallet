@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+
   resources :coins
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  # Para ver todas as rotas pode usar rails routes no terminal ou
+  # acessar no navegador no projeto /rails/info/routes
+  # Doc https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   root "welcome#index"
