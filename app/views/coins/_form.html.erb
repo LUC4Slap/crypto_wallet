@@ -13,18 +13,18 @@
 
   <div>
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :acronym, style: "display: block" %>
-    <%= form.text_field :acronym %>
+    <%= form.text_field :acronym, class: "form-control" %>
   </div>
 
   <div>
     <%= form.label :url_image, style: "display: block" %>
-    <%= form.text_field :url_image %>
-    <%= image_tag coin.url_image, size: "30x30" %>
+    <%= form.text_field :url_image, class: "form-control" %>
+    <%= image_tag coin.url_image ? coin.url_image : "" , size: "30x30", class: "mt-2" %>
   </div>
 
   <div>

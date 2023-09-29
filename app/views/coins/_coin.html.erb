@@ -4,7 +4,7 @@
     <td><%= coin.acronym %></td>
     <td><%= image_tag coin.url_image, width: 30, heigth: 30 %></td>
     <td>
-      <%= link_to "Editar moeda", edit_coin_path(coin), class: "btn btn-primary" %> <%= button_to "Deletar moeda", coin, method: :delete, class: "btn btn-primary mt-1" %>
+      <%= link_to "Editar moeda", edit_coin_path(coin), class: "btn btn-primary" %> <%= button_to "Deletar moeda", coin, method: :delete, data: {confirm: "Tem certeza?"}, class: "btn btn-primary mt-1" %>
     </td>
   </tr>
 </div>
