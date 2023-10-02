@@ -1,10 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @coin %>
+<%# <%= render @coin %>
+
+<p>
+  <strong>Descrição</strong>
+  <%= @coin.description %>
+</p>
+
+<p>
+  <strong>Sigla</strong>
+  <%= @coin.acronym %>
+</p>
+
+<p>
+  <strong>Imagem</strong>
+  <%= image_tag @coin.url_image, size: "30x30" %>
+</p>
 
 <div>
-  <%= link_to "Edit this coin", edit_coin_path(@coin) %> |
-  <%= link_to "Back to coins", coins_path %>
+  <%= link_to "Editar Moeda", edit_coin_path(@coin),class: "btn btn-primary" %>
+  <%= link_to "Voltar para lista de moedas", coins_path,class: "btn btn-primary" %>
 
-  <%= button_to "Destroy this coin", @coin, method: :delete, data: {confirm: "Tem certeza?"} %>
+  <%= button_to "Deletar Moeda", @coin, method: :delete, data: {confirm: "Tem certeza?"}, class: "btn btn-danger mt-4" %>
 </div>
